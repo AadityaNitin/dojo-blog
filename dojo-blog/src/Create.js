@@ -14,7 +14,7 @@ const Create = () => {
         
         setIsPending(true);
 
-        fetch('http://localhost:8000/blogs',{
+        fetch('https://dojo-blog-madclub.herokuapp.com/blogs',{
             method: 'POST',
             headers:{"Content-Type": "application/json"},
             body: JSON.stringify(blog)
@@ -45,8 +45,10 @@ const Create = () => {
                 <select
                  value={author}
                  onChange={(e) => setAuthor(e.target.value)}>
-                    <option value="mario">mario</option>
-                    <option value="yoshi">yoshi</option>
+                    <option value="Aaditya">Aaditya</option>
+                    <option value="Jayden">Jayden</option>
+                    <option value="Nil">Nil</option>
+
                 </select>
                 {!isPending && <button>Add Blog</button>}
                 {isPending && <button disabled>Adding Blog...</button>}
